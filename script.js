@@ -5,10 +5,6 @@ const confettiContainer = document.getElementById('confetti-container');
 const peti = document.getElementById('harta-karun');
 const gallery = document.querySelector('.gallery');
 
-// Autoplay audio when possible
-document.addEventListener('DOMContentLoaded', () => {
-    audio.play().catch(e => console.log('Autoplay prevented:', e));
-});
 
 
 // Confetti effect
@@ -49,6 +45,7 @@ window.addEventListener('load', () => {
 });
 
 peti.addEventListener('click', () => {
+    audio.play().catch(e => console.log('Autoplay prevented:', e));
     console.log('testes')
     const message = document.createElement('div');
     gallery.appendChild(message);
